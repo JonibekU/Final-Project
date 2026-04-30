@@ -62,4 +62,10 @@ router.post('/delete', function (req, res, next) {
 router.get('/menu', function(req, res, next) {
   res.render('menu', { title: 'Menu' });
 });
+router.get('/about', function(req, res, next) {
+  res.render('about', { title: 'About' });
+});
+router.get('/comments', function(req, res, next) {
+  res.render('comments', { title: 'Comments' });
+});
 module.exports = router;

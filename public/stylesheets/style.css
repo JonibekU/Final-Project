@@ -181,3 +181,60 @@ body {
   font-weight: bold;
   color: #F7C64A;
 }
+/* About section */
+.about {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #10291D;
+  line-height: 1.6;
+}
+
+.about h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* Comments section */
+.comments {
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #10291D;
+}
+
+/* Form styling */
+.comments form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.comments input,
+.comments textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.comments button {
+  background-color: #F7C64A;
+  color: #10291D;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.comments button:hover {
+  background-color: #e6b93f;
+}
+
+/* Comment list */
+.comment {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+}
