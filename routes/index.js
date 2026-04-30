@@ -59,5 +59,7 @@ router.post('/delete', function (req, res, next) {
         res.status(500).send('Error deleting todo:');
     }
 });
-
+router.get('/menu', function(req, res, next) {
+  res.render('menu', { title: 'Menu' });
+});
 module.exports = router;
