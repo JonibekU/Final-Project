@@ -1,6 +1,12 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  section.error-page
+    h2 Oops! Something went wrong
+
+    if message
+      p #{message}
+    else
+      p We're having trouble loading this page.
+
+    a(href="/") Go back to homepage

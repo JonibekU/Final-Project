@@ -1,7 +1,30 @@
 doctype html
-html
+html(lang="en")
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Downtown Donuts
+    link(rel="stylesheet", href="/stylesheets/style.css")
+
   body
-    block content
+    header
+      nav.navbar
+        h1.logo Downtown Donuts
+
+        ul.nav-links
+          li: a(href="/") Home
+          li: a(href="/menu") Menu
+          li: a(href="/about") About
+          li: a(href="/comments") Comments
+
+          li.dropdown
+            span Online ▾
+            ul.dropdown-menu
+              li: a(href="https://www.ubereats.com", target="_blank") UberEats
+              li: a(href="https://www.doordash.com", target="_blank") DoorDash
+
+    main
+      block content
+
+    footer
+      p © 2026 Downtown Donuts
