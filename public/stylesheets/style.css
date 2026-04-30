@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-color: #F7F7F7;
 }
 
 /* Navbar container */
@@ -9,16 +10,34 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f8f4f0;
+  background-color: #F7C64A;
   padding: 15px 30px;
-  border-bottom: 1px solid #ddd;
+}
+/* Logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
+/* Logo image */
+.logo-img {
+  height: 45px;
+  width: auto;
+}
+
+/* Logo text */
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #10291D;
+}
 /* Logo */
 .logo {
   margin: 0;
   font-size: 24px;
   font-weight: bold;
+  color: #10291D;
 }
 
 /* Navigation links */
@@ -33,26 +52,27 @@ body {
 /* Links */
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #10291D;
   font-weight: 500;
 }
 
 /* Hover effect */
 .nav-links a:hover {
-  color: #c97b63;
+  color: #F7C64A;
 }
 
 /* Dropdown container */
 .dropdown {
   position: relative;
   cursor: pointer;
+  color: #10291D;
 }
 
 /* Dropdown menu */
 .dropdown-menu {
   display: none;
   position: absolute;
-  background: white;
+  background: #F7F7F7;
   list-style: none;
   padding: 10px;
   margin: 0;
@@ -67,7 +87,62 @@ body {
   margin: 5px 0;
 }
 
+.dropdown-menu a {
+  color: #10291D;
+}
+
 /* Show dropdown on hover */
 .dropdown:hover .dropdown-menu {
   display: block;
+}
+
+/* Hero section */
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #10291D;
+  color: white;
+}
+
+/* Hero content */
+.hero-content h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #F7C64A;
+  color: #10291D;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #e6b93f;
+}
+
+/* Secondary button */
+.btn.secondary {
+  background-color: transparent;
+  border: 2px solid #F7C64A;
+  color: #F7C64A;
+}
+
+.btn.secondary:hover {
+  background-color: #F7C64A;
+  color: #10291D;
 }
