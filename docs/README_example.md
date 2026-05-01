@@ -1,52 +1,94 @@
 # CS208 Full Stack Final Project - Donut Shop Application
 
-- Name: John Doe
-- GitHub: [https://github.com/johndoe](https://github.com/johndoe)
+- Name: Jonibek Utaev
+- GitHub: https://github.com/JonibekU/Final-Project
 - Term: Spring 2026
 
 ## Project Description
 
-This is my full-stack application for CS208, built with node.js. I built a web
-application for a small donut shop that allows users to view and order donuts
-online. The application uses Express for the backend and MariaDB (MySQL) for the
-database. Please read the following instructions carefully because some of the
-setup only needs to be done once.
+# Downtown Donuts Website Prototype
 
-## Install the Database
+## Overview
+This project is a full-stack prototype website for Downtown Donuts, a family-owned donut shop. The goal was to create a modern, cozy, and mobile-friendly design while implementing full-stack functionality such as a customer comments system.
 
-To set up the database, run the `install_db.sh` script in the setup_scripts
-directory. This script will install MariaDB and start the server running. You
-only need to run this script once per Codespace.
+---
 
-```bash
-./setup_scripts/install_db.sh
-```
+## Setup Instructions
 
-## Create the Database Tables
+1. Clone the repository:
+   git clone <your-repo-url>
 
-Create the initial tables by running the following command:
+2. Install dependencies:
+   npm install
 
-```bash
-sudo mysql -u root -p < ./setup_scripts/create_demo_table.sql
-```
+3. Start MySQL:
+   sudo service mysql start
 
-## Install Dependencies
+4. Open MySQL:
+   sudo mysql
 
-Install the required dependencies using npm:
+5. Create database:
+   CREATE DATABASE cs208demo;
+   USE cs208demo;
 
-```bash
-npm install
-```
+6. Create comments table:
+   CREATE TABLE comments (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     name VARCHAR(100),
+     comment TEXT,
+     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+   );
 
-## Run the Application
+7. Start the app:
+   npm start
 
-Start the application using the following command:
+8. Open browser:
+   http://localhost:3000
 
-```bash
-npm start
-```
+---
 
-## Access the Application
+## Design Decisions
 
-On Codespaces, you can access the application by forwarding port 3000. Open the
-forwarded port in your browser to view the application.
+1. **Color Scheme**
+   I used a gold and dark green color palette to match the brand and create a cozy, warm feeling.
+
+2. **Navigation Bar**
+   I implemented a simple top navigation bar with a dropdown for online ordering to keep the layout clean and modern.
+
+3. **Comments System**
+   I designed the comments section to look like review cards to improve readability and user experience.
+
+---
+
+## Edge Cases
+
+- **Empty Input**
+  The server checks if name or comment fields are empty and prevents submission.
+
+- **Long Input**
+  Input fields are limited and handled to prevent extremely long text submissions.
+
+- **Server Errors**
+  If the database fails, the user sees a friendly error message instead of a crash.
+
+- **Double Click Submit**
+  Redirect behavior prevents duplicate submissions.
+
+---
+
+## Challenges & Learnings
+
+1. **Database Connection Issues**
+   I had trouble connecting to MySQL due to authentication errors. I solved this by creating a dedicated database user instead of using root.
+
+2. **Pug Indentation Errors**
+   Pug is very strict about spacing, and I encountered multiple crashes due to inconsistent indentation. I fixed this by standardizing to spaces only.
+
+---
+
+## Citations
+
+- Express.js Documentation   https://expressjs.com/en/guide/using-middleware.html
+- MySQL2 Documentation  https://www.npmjs.com/package/mysql2
+- W3Schools CSS Reference  https://www.w3schools.com/cssref/pr_background-color.php
+- Stack Overflow (debugging database and routing issues) https://stackoverflow.com/questions/3161315/how-to-debug-a-database-query-for-performance
