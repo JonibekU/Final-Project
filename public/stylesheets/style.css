@@ -386,3 +386,51 @@ body {
 .delete-btn:hover {
   background-color: #a63b3b;
 }
+
+/* Menu Page */
+.menu {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  color: #10291D;
+}
+
+.menu h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.menu-section {
+  margin-bottom: 30px;
+}
+
+.menu-section h3 {
+  border-bottom: 2px solid #F7C64A;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* Menu items */
+.menu-items .item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+/* About Page */
+.about {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  line-height: 1.6;
+  color: #10291D;
+}
+
+.about h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about p {
+  margin-bottom: 15px;
+}
