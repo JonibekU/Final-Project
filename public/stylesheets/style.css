@@ -321,3 +321,68 @@ body {
 .delete-btn:hover {
   background-color: #a63b3b;
 }
+/* Comments Section */
+.comments {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Form styling */
+.comments form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comments input,
+.comments textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.comments button {
+  width: 120px;
+}
+
+/* Comment cards */
+.comment {
+  background: #F7F7F7;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #F7C64A;
+}
+
+/* Name */
+.comment strong {
+  font-size: 16px;
+  color: #10291D;
+}
+
+/* Text */
+.comment p {
+  margin: 8px 0;
+}
+
+/* Timestamp */
+.comment span {
+  font-size: 12px;
+  color: gray;
+}
+
+/* Delete button */
+.delete-btn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #c94c4c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #a63b3b;
+}
