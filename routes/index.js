@@ -107,6 +107,17 @@ router.post('/comments', function(req, res) {
     }
   );
 });
+router.post('/comments/delete', function (req, res) {
+  const { id } = req.body;
 
+  req.db.query('DELETE FROM comments WHERE id = ?', [id], (err) => {
+    if (err) {
+      console.error('Error deleting comment:', err);
+      return res.status(500).send('Error deleting comment');
+    }
+
+    res.redirect('/comments');
+  });
+});
 
 module.exports = router;

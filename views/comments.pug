@@ -4,7 +4,7 @@ block content
   section.comments
     h2 Customer Comments
 
-    // ✅ SINGLE FORM (only once at the top)
+    // Form
     form(action="/comments" method="POST")
       label(for="name") Name:
       input(type="text" name="name" required)
@@ -14,7 +14,7 @@ block content
 
       button(type="submit") Submit
 
-    // ✅ Comments list
+    // Comments list
     .comment-list
       if comments.length === 0
         p No comments yet. Be the first!
@@ -24,3 +24,7 @@ block content
           strong= c.name
           p= c.comment
           span= new Date(c.created_at).toLocaleString()
+
+          form(action="/comments/delete" method="POST")
+            input(type="hidden" name="id" value=c.id)
+            button.delete-btn(type="submit") Delete
