@@ -14,9 +14,13 @@ block content
 
       button(type="submit") Submit
 
-    // Comments list (placeholder for now)
-    div.comment-list
-      div.comment
-        strong John Doe
-        p Great donuts!
-        span Posted just now
+    // Comments list
+    .comment-list
+      if !comments || comments.length === 0
+        p No comments yet. Be the first!
+
+      each c in comments
+        .comment
+          strong= c.name
+          p= c.comment
+          span= new Date(c.created_at).toLocaleString()
