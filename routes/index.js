@@ -85,6 +85,28 @@ router.post('/comments', function(req, res) {
     }
   );
 });
+router.post('/comments', function(req, res) {
+  const { name, comment } = req.body;
+
+  // Basic validation
+  if (!name || !comment) {
+    return res.status(400).send('Please fill out all fields');
+  }
+
+  req.db.query(
+    'INSERT INTO comments (name, comment) VALUES (?, ?)',
+    [name, comment],
+    (err, results) => {
+      if (err) {
+        console.error('INSERT ERROR:', err);
+        return res.status(500).send('Error saving comment');
+      }
+
+      // Redirect back to comments page
+      res.redirect('/comments');
+    }
+  );
+});
 
 
 module.exports = router;
