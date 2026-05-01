@@ -15,35 +15,24 @@ This project is a full-stack prototype website for Downtown Donuts, a family-own
 
 ## Setup Instructions
 
-1. Clone the repository:
-   git clone <your-repo-url>
 
-2. Install dependencies:
+1. Install dependencies:
    npm install
 
-3. Start MySQL:
+2. Start MySQL:
    sudo service mysql start
 
-4. Open MySQL:
+3. Open MySQL:
    sudo mysql
 
-5. Create database:
+4. Create database:
    CREATE DATABASE cs208demo;
    USE cs208demo;
 
-6. Create comments table:
-   CREATE TABLE comments (
-     id INT AUTO_INCREMENT PRIMARY KEY,
-     name VARCHAR(100),
-     comment TEXT,
-     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-   );
-
-7. Start the app:
+5. Start the app:
    npm start
 
-8. Open browser:
-   http://localhost:3000
+
 
 ---
 
